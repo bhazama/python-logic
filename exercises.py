@@ -190,5 +190,10 @@ name_caps("aloha")
 
 #Create a function named leap_year which takes a parameter year.
 #The function will print 'The year x is a leap year.' where x is the year value that is passed into the function and print 'The year x is not a leap year.' if it isn't a leap year.
+def leap_year(year):
+    if (year % 4 == 0) and (year % 100 == 1) and (year % 400 == 0):
+        print("The year " + str(year) + " is a leap year")
+    else:
+        print("The year " + str(year) + " is not a leap year") 
 
-
+leap_year(2020)
