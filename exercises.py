@@ -29,17 +29,41 @@ scorechecker(score)
 # <= 50: 'Basic Package'
 # <=100: 'Premium Package'
 # >100: 'Platinum Package'
+download_speed = 101
+
+def download_speed_checker(speed):
+    if speed > 100:
+        print("Platinum Package")
+    elif speed <= 100:
+        print("Premium Package")
+    elif speed <= 50:
+        print("Basic Package")
+
+download_speed_checker(download_speed)
+
 
  #4 Function - check_password
  #Create a function named check_password which takes a parameter password.
 
  #The function will return true if the password passed into the function is equal to 'qwerty'. Declare a variable named password_result and print your result.
+def check_password(password):
+    if password == "qwerty":
+        return True
+
+password_result = check_password("qwerty")
+print(password_result)
 
 #5 Function check_login
 #Create a function named check_login which takes a parameter login.
 
 #The function will print 'Login Success' if the login passed into the function is equal to 'DevLeague' and print 'Re-enter Login' if it doesn't.
+def check_login(login):
+    if login == "DevLeague":
+        print("Login Success")
+    else:
+        print("Re-enter Login")
 
+check_login("DevLeague")
 #6 Function malware_type
 #Create a function named malware_type which takes a parameter malware. 
 
@@ -47,17 +71,36 @@ scorechecker(score)
 #if malware is adware: 'Low Threat'
 #if malware is virus: 'Do not share files'
 #default message 'I hope you backed up your data'
+def malware_type(malware):
+    if malware == "adware":
+        print("Low Threat")
+    elif malware == "virus":
+        print("Do not share files")
+    else:
+        print("I hope you backed up your data")
 
+malware_type("adware")
 #7 Function encryption
-#Create a function named encryption which takes a parameter keys.
-
+#Create a function named encryption which takes a parameter keys
 #The function will print 'Encryption Success' if the keys passed into function has 5 characters and print 'Encryption Fail' if it doesn't.
+def encryption(keys):
+    if(len(keys) == 5):
+        print("Encryption Sucess")
+    else:
+        print("Encryption Fail")
 
+encryption("hello")
 #8 Function even_cryptography
 #Create a function named even_cryptography which takes a parameter num.
 
 #The function will print 'Decryption Success' if the number passed into the function is even and print 'Decryption Fail' if it isn't.
+def even_cryptography(num):
+    if num % 2 == 0:
+        print("Decryption Success")
+    else:
+        print("Decryption Fail")
 
+even_cryptography(87)
 #9 Function bandwidth
 #Declare a variable named mbps and assign it a list of 5 number values of your choosing. 
 
@@ -68,24 +111,59 @@ scorechecker(score)
 #if sum <= 100: 'Moderate User'
 #if sum <=150: 'Multi Media User'
 #if sum >150: 'Power User'
+mbps = [10, 10, 10, 10, 10]
+
+def bandwidth(usage):
+    if sum(usage) <= 50:
+        print("Light User")
+    elif sum(usage) <= 100:
+        print("Moderate User")
+    elif sum(usage) <= 150:
+        print("Multi Media User")
+    elif sum(usage) > 150:
+        print("Power User")
+
+bandwidth(mbps)
 
 #10 Function ssh_keys
 #Create a function named ssh_keys which takes two parameters public and private.
-
 #The function will return false if public and private aren't equal and return true if they are equal.
-
 #Declare a variable named ssh_connection and print your result.
+def ssh_keys(public,private):
+    if public == private:
+        return True
+    else:
+        return False
 
+ssh_connection = ssh_keys("keys","key")
+print(ssh_connection)
 #11 Function largest_num
 #Create a function named largest_num which takes three parameters: num_1, num_2 and num_3.
-
 #The function will find the largest number among any three numbers that are passed into the function. Declare a variable named large_num_result and print your results.
+def largest_num(num_1,num_2,num_3):
+    if num_1 > num_2 and num_1 > num_3:
+        return num_1
+    elif num_2 > num_1 and num_2 > num_3:
+        return num_2
+    else:
+        return num_3
+
+large_num_result = largest_num(49,50,48)
+print(large_num_result)
 
 #12 Function pos_neg
 #Create a function named pos_neg which takes a parameter num.
 
 #The function will print 'Positive Number' if the number passed in is positive, print 'Zero' if the number is 0 and print 'Negative Number' for a negative number.
+def pos_neg(num):
+    if num > 0:
+        print("Positive Number")
+    elif num == 0:
+        print("Zero")
+    else:
+        print("Negative Number")
 
+pos_neg(-0.44)
 #13 Function name_caps
 #Create a function named name_caps which takes a parameter name.
 
@@ -96,6 +174,15 @@ scorechecker(score)
 #if characters in name >10: leave the letters as is
 
 #Print your results
+def name_caps(name):
+    if len(name) <= 5:
+        print(name.title())
+    elif len(name) <= 10:
+        print(name.upper())
+    else:
+        print(name)
+
+name_caps("aloha")
 
 #14 Function leap_year
 
