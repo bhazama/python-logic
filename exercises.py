@@ -8,12 +8,22 @@
 
 #1. Declare a variable named weather and assign it a string value of 'rain'. Next create a conditional statement that will check the weather and print 'Bring an umbrella' if weather equals 'rain'.
 weather = "rain"
-if weather == "rain":
-    print("Bring an umbrella")
+def rainchecker(weather_condition):
+    if weather_condition == "rain":
+        print("Bring an umbrella")
     else:
-        print("none")
-#2 Declare a variable named score and assign it a number value of 70. Next create a conditional statement that will check the score and print 'You pass!' if the score is 70 and above and print 'Study harder!' if the score is less than 70.
+        print("bring sunscreen")
 
+rainchecker(weather)
+#2 Declare a variable named score and assign it a number value of 70. Next create a conditional statement that will check the score and print 'You pass!' if the score is 70 and above and print 'Study harder!' if the score is less than 70.
+score = 70
+def scorechecker(num):
+    if num >= 70:
+        print("You Pass!")
+    elif num < 70:
+        print("Study Harder!")
+
+scorechecker(score)
 #3. Declare a variable named download_speed and assign it a data value of 50. Next create a conditional statement that will check the download speed and print the following based on the condition:
 
 # <= 50: 'Basic Package'
